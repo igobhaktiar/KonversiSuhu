@@ -11,10 +11,16 @@ void main(List<String> arguments) {
   var celcius = (suhufarenheit -32 ) * 5/9;
   var reamur = (suhufarenheit - 32 ) * 4/9;
   var kelvin = (suhufarenheit - 32) * 5/9 + 273;
-  var farenheit = (suhuCelcius + 32) * 9/5;
+  var farenheit = suhuCelcius * 9/5 + 32;
+  var celciusKelvin = suhuCelcius + 273.15;
+  var celciusReamur = 4/5 * suhuCelcius;
 
-  print('$suhufarenheit derajat Farenheit = $celcius derajat celcius');
-  print('$suhufarenheit derajat Farenheit = $reamur derajat reamur');
-  print('$suhufarenheit derajat Farenheit = $kelvin derajat kelvin');
-  print('$suhuCelcius derajat celcius = $farenheit derajat farenheit');
+  print('${suhufarenheit.toStringAsFixed(2)} derajat Farenheit = ${celcius.toStringAsFixed(2)} derajat celcius');
+  print('${suhufarenheit.toStringAsFixed(2)} derajat Farenheit = ${reamur.toStringAsFixed(2)} derajat reamur');
+  print('${suhufarenheit.toStringAsFixed(2)} derajat Farenheit = ${kelvin.toStringAsFixed(2)} derajat kelvin');
+  print('${suhuCelcius.toStringAsFixed(2)} derajat celcius = ${farenheit.toStringAsFixed(2)} derajat farenheit');
+  print('${suhuCelcius.toStringAsFixed(2)} derajat celcius = ${celciusKelvin.toStringAsFixed(2)} derajat kelvin');
+  print('${suhuCelcius.toStringAsFixed(2)} derajat celcius = ${celciusReamur.toStringAsFixed(2)} derajat Reamur');
+
+
 }
